@@ -4,9 +4,9 @@ const assert = require('assert')
 const noNaughtyWords = require('..')
 
 const assertions = [
-  ['asshole', '*******'],
-  ['you fucking asshole', 'you ******* *******'],
-  ['you fucking little shit', 'you ******* little ****'],
+  ['asshole', '✴︎✴︎✴︎✴︎✴︎✴︎✴︎'],
+  ['you fucking asshole', 'you ✴︎✴︎✴︎✴︎✴︎✴︎✴︎ ✴︎✴︎✴︎✴︎✴︎✴︎✴︎'],
+  ['you fucking little bitch', 'you ✴︎✴︎✴︎✴︎✴︎✴︎✴︎ little ✴︎✴︎✴︎✴︎✴︎'],
 
   ['some benign text', 'some benign text'],
   ['hello its me', 'hello its me']

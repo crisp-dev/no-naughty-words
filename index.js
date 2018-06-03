@@ -8,7 +8,7 @@ const words = fs.readFileSync(path.resolve(__dirname, 'data/words.txt'), 'utf8')
 function * stars (length) {
   let i = 0
   while (i++ < length) {
-    yield '*'
+    yield '✴︎'
   }
 }
 
