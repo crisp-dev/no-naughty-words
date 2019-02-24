@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "download-lodnoaobw": "curl https://raw.githubusercontent.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words/master/en > sources/lodnoaobw.txt",
-    "build": "node scripts/build",
     "eslint": "eslint --fix --cache .",
     "eslint:ci": "eslint .",
     "test": "jest --coverage"
