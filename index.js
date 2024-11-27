@@ -5,10 +5,10 @@ const fs = require('fs')
 
 const words = fs.readFileSync(path.resolve(__dirname, 'data/words.txt'), 'utf8').split('\n').filter(Boolean)
 
-function * stars (length) {
+function * stars (length, star) {
   let i = 0
   while (i++ < length) {
-    yield '✴︎'
+    yield (star || '*')
   }
 }
 
@@ -28,17 +28,17 @@ class NoNaughtyWords {
     this.compile()
   }
 
-  replace (word) {
-    return Array.from(stars(Buffer.byteLength(word))).join('')
+  replace (word, replacement) {
+    return Array.from(stars(Buffer.byteLength(word), replacement)).join('')
   }
 
   compile () {
     this.re = new RegExp(`\\b(${Array.from(this.words.values()).map(escapeStringRegexp).join('|')})\\b`, 'ig')
   }
 
-  filter (text) {
+  filter (text, replacement) {
     return text.replace(this.re, (substring, word) => {
-      return this.replace(word)
+      return this.replace(word, replacement)
     })
   }
 }
