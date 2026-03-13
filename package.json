@@ -1,6 +1,6 @@
 {
   "name": "no-naughty-words",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Censor bad words",
   "main": "index.js",
   "scripts": {
